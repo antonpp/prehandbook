@@ -19,4 +19,5 @@ The key insight here comes after yet again a comparison to the world of traditio
 ### Appendix
 
 [1] Here we're referring to EVALs in the context of building applications on top of models that have been trained or fine-tuned by others. We ofcourse also need evaluation frameworks when training and fine-tuning models (optimizing for perplexity, loss functions etc.) We're not talking about these types of evaluations here. In other words we don't have access to all the individual values of the final llm layer, we're only working with wathever tokens the API sends us.
+
 [2] Synthetic EVALs generation is a counter argument to this and will surely be a space that an industrious founder will want to explore.
