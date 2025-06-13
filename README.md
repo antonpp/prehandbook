@@ -3,18 +3,18 @@
 This article introduces the concept of Prompt Reliability Engineering as the final step on the prompt-ops maturity ladder. We will walk up this ladder and talk through the concepts and best practices on each of the steps. If you just deployed your first genai app and you're starting to get overwhelmed scrolling through the application logs or if prompt engineering  seems like taking one step forward and two steps back then this article is for you.
 
 ### Prompt-ops maturity levels
-#### Yoloing prompts
+#### 1.Yoloing prompts
 This is where every project starts and many end. If you update a piece of text in VScode, hit save ,and then go on to refresh a web-page to try the changes in a chat app, then you're likely in this stage. You're hopefully using github or some type of source code versioning to save the changes to your prompts. Bonus points if you've set-up some type of ci/cd workflow that also deploys changes commited to your production app.
-#### Logging & tracing
+#### 2.Logging & tracing
 Once the llm app becomes more sophisticated and the developer starts chaining multiple llm invocations observability becomes an issue. Debugging poor app behaviour becomes laborous, especially with large prompts. Dedicated tooling for genai app observability solves this.
 TODO: add observability tooling examples
-#### EVALs 🤝 User feedback
+#### 3.EVALs 🤝 User feedback
 Prompt engineering following your gut feel will hit its limits even with best observability tooling available. LLM models will inevitably drift, introducing new system instructions to address new failure modes can lead to degraded performance on existing failure modes, or you might simply want to start using a different model provider all together. Your genai application will start having degraded performance in unexpected ways.
 
 Drawing from traditional swe experience the solution is obvious: a testing framework. This is where EVALs[1] come in. EVALs are testing your LLM models against a fixed set of labeled input prompts. Labeled in the sence that we know what output we're expecting for each one of these input prompts.
 
 The key insight here comes after yet again a comparison to the world of traditional engineering. A start-up operating on this step of the ladder will be treating their EVALs like the source code: they're hard to acquire [2]. After all you will need to have users to bump into all the failure modes of the llm app hiding in remote nooks and crannies of the problem space. The prompts for a start-up operating on this step of the ladder will rather be more akin to compiled code: replacable and maybe even shareable.
-#### Prompt Reliability Engineering
+#### 4.Prompt Reliability Engineering
 
 ### Appendix
 
